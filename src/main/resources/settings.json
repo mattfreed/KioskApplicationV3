@@ -1,0 +1,7 @@
+{
+  "example-setting": "example-value",
+  "pathfinding-mode": "astar",
+  "reinit": false,
+  "fullscreen": true,
+  "default-location": "FINFO00101"
+}

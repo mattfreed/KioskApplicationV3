@@ -1,0 +1,17 @@
+.gradle/
+.idea/
+classes/
+build/
+derby.log
+*.class
+*.lock
+*.iml
+applicationData/
+out/
+BishopfishApiDatabases/
+EmergencyImageCaptures/
+.DS_Store
+NewNodes.csv
+NewEdges.csv
+BishopfishApiDatabases
+gargoyle_food_request_db

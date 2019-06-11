@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #012953;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.cs3733d19.teamg.DeliveryRequestController">
+   <children>
+      <GridPane alignment="CENTER" maxWidth="300.0" minWidth="300.0" prefHeight="600.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DCDCDC;" GridPane.rowSpan="7">
+               <children>
+                  <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label alignment="BOTTOM_CENTER" text="Delivery Request" textFill="#012953" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label text="Pickup Location" textFill="#012953" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="pickupLocTextField" alignment="CENTER" labelFloat="true" promptText="Search" style="-fx-background-color: white; -fx-border-color: white;" unFocusColor="#ffffff00" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="11.0" right="11.0" />
+                           </GridPane.margin></JFXTextField>
+                        <ScrollPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="154.0">
+                                 <children>
+                                    <VBox fx:id="pickupLocVbox" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </ScrollPane>
+                        <HBox alignment="CENTER" GridPane.rowIndex="4">
+                           <children>
+                              <JFXDatePicker fx:id="pickupDatePicker" defaultColor="#012953" />
+                              <JFXTimePicker fx:id="pickupTimePicker" defaultColor="#012953" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </GridPane.margin>
+                        </HBox>
+                        <Label text="Dropoff Location" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="dropoffLocTextField" alignment="CENTER" labelFloat="true" promptText="Search" style="-fx-background-color: white; -fx-border-color: white;" unFocusColor="#ffffff00" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets left="11.0" right="11.0" />
+                           </GridPane.margin></JFXTextField>
+                        <ScrollPane fx:id="roomsPane1" layoutX="10.0" layoutY="110.0" prefHeight="200.0" prefWidth="272.0" GridPane.rowIndex="7">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="154.0">
+                                 <children>
+                                    <VBox fx:id="dropoffLocVbox" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </ScrollPane>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="180.0" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="8">
+                           <children>
+                              <JFXDatePicker fx:id="dropoffDatePicker" defaultColor="#012953" />
+                              <JFXTimePicker fx:id="dropoffTimePicker" defaultColor="#012953">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </JFXTimePicker>
+                           </children>
+                           <GridPane.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </GridPane.margin>
+                        </HBox>
+                        <JFXTextField fx:id="reasoningTextField" alignment="CENTER" onAction="#submitRequest" promptText="Enter additonal information" GridPane.rowIndex="9">
+                           <GridPane.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </GridPane.margin>
+                        </JFXTextField>
+                        <Label fx:id="errorLabel" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+                        <JFXButton fx:id="submitServiceButton" buttonType="RAISED" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" onAction="#submitRequest" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #012953;" text="Confirm" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="11">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="200.0" minHeight="50.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="25.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="200.0" minHeight="50.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="25.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="200.0" minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="25.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+            </AnchorPane>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

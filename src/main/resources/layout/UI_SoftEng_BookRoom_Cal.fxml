@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.calendarfx.view.CalendarView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import java.awt.Insets?>
+<AnchorPane maxHeight="600.0" prefHeight="600.0" style="-fx-background-color: #DCDCDC; -fx-border-color: #012953; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.cs3733d19.teamg.RoomBookingCalController">
+    <children>
+        <VBox alignment="TOP_CENTER" maxWidth="500.0" minWidth="500.0" prefHeight="600.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" >
+            <children> <Label alignment="TOP_CENTER" text=" " maxWidth="500.0" minHeight="50.0" style="-fx-font-size: 10;" />
+                <Label alignment="TOP_CENTER" text="Click a room on the map" maxWidth="500.0" minHeight="50.0" fx:id="title" style="-fx-font-size: 30;" />
+                <CalendarView fx:id="calendarView" maxWidth="500.0"/>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

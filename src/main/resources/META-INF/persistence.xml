@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+ http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
+
+    <persistence-unit name="kiosk">
+        <description>kiosk application data</description>
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <class>edu.wpi.cs3733d19.teamg.models.Booking</class>
+        <class>edu.wpi.cs3733d19.teamg.models.Edge</class>
+        <class>edu.wpi.cs3733d19.teamg.models.Employee</class>
+        <class>edu.wpi.cs3733d19.teamg.models.Equipment</class>
+        <class>edu.wpi.cs3733d19.teamg.models.Node</class>
+        <class>edu.wpi.cs3733d19.teamg.models.Room</class>
+        <class>edu.wpi.cs3733d19.teamg.models.ServiceRequest</class>
+        <class>edu.wpi.cs3733d19.teamg.models.ServiceRequestCategory</class>
+        <class>edu.wpi.cs3733d19.teamg.models.MaintenanceRequest</class>
+        <class>edu.wpi.cs3733d19.teamg.models.SecurityRequest</class>
+        <class>edu.wpi.cs3733d19.teamg.models.CustodianRequest</class>
+        <class>edu.wpi.cs3733d19.teamg.models.ItRequest</class>
+        <class>edu.wpi.cs3733d19.teamg.models.FloralRequest</class>
+        <class>edu.wpi.cs3733d19.teamg.models.ReligiousRequest</class>
+        <class>edu.wpi.cs3733d19.teamg.models.DeliveryRequest</class>
+        <class>edu.wpi.cs3733d19.teamg.models.LanguageInterpreterRequest</class>
+        <class>edu.wpi.cs3733d19.teamg.models.TransportationRequest</class>
+        <class>floral.api.floralEmployee</class>
+        <class>floral.api.ServiceRequestFloral</class>
+        <properties>
+            <property name = "hibernate.dialect" value = "org.hibernate.dialect.DerbyTenSevenDialect" />
+            <property name = "hibernate.connection.driver_class" value = "org.apache.derby.jdbc.EmbeddedDriver" />
+            <property name = "hibernate.connection.url" value = "jdbc:derby:applicationData;create=true" />
+            <property name = "hibernate.hbm2ddl.auto" value = "update" />
+        </properties>
+    </persistence-unit>
+
+</persistence>

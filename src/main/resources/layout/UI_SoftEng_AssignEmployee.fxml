@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.cs3733d19.teamg.AssignEmployeeController">
+   <children>
+      <HBox style="-fx-background-color: #012953;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane HBox.hgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" prefWidth="400.0" />
+                  <ColumnConstraints hgrow="ALWAYS" prefWidth="400.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="300.0" vgrow="NEVER" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="NEVER" />
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="NEVER" />
+                  <RowConstraints />
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="300.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Select Service Request" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="requestLabel" alignment="CENTER" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                  <ScrollPane GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.rowSpan="2147483647">
+                    <content>
+                      <AnchorPane>
+                           <children>
+                              <VBox fx:id="serviceRequestVbox" focusTraversable="true" nodeOrientation="LEFT_TO_RIGHT" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="5.0" top="10.0" />
+                     </GridPane.margin>
+                  </ScrollPane>
+                  <ScrollPane GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <content>
+                        <AnchorPane>
+                           <children>
+                              <VBox fx:id="selectEmployeeVbox" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </ScrollPane>
+                  <Label text="Select Employee" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="employeeLabel" alignment="CENTER" textFill="#e1e1e1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                  <Label fx:id="assignedEmployeeLabel" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                  <AnchorPane prefHeight="278.0" prefWidth="383.0" style="-fx-background-color: #012953;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <JFXTextArea fx:id="serviceDetail" editable="false" focusColor="#405aa800" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #012953; -fx-border-color: #ffffff; -fx-border-width: 4;" unFocusColor="#691b1b00" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font></JFXTextArea>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="5.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </AnchorPane>
+                  <Label alignment="CENTER" text="About Service Request" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <GridPane maxWidth="200.0" minWidth="200.0" prefWidth="200.0" HBox.hgrow="NEVER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <JFXButton fx:id="assignEmployeeButton" buttonType="RAISED" maxHeight="30.0" maxWidth="150.0" minHeight="30.0" minWidth="150.0" onAction="#assignEmployee" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: white;" text="Assign Employee" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="resolveRequestButton" buttonType="RAISED" maxHeight="30.0" maxWidth="150.0" minHeight="30.0" minWidth="150.0" onAction="#resolveRequest" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: white;" text="Resolve Request" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

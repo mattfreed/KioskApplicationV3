@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAnchorPane" style="-fx-background-color: #012953;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.cs3733d19.teamg.EditEdgesController">
+   <children>
+      <GridPane maxWidth="800.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #012953;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane GridPane.columnIndex="2" GridPane.rowIndex="3" HBox.hgrow="ALWAYS">
+               <children>
+                  <TableView fx:id="edgeDisplayTableView" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <ScrollPane fx:id="toNode" prefHeight="163.0" prefWidth="635.0" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS" HBox.hgrow="ALWAYS">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <VBox fx:id="toNodeSelectionVbox" layoutX="34.0" layoutY="1" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <ScrollPane prefHeight="515.0" prefWidth="102.0" GridPane.rowIndex="3" HBox.hgrow="ALWAYS">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="200.0">
+                     <children>
+                        <VBox fx:id="nodeSelectionVbox" layoutX="34.0" layoutY="-14.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <Label text="Edit Edges" textFill="#f8f8f8" underline="true" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label text="Originating Node" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label fx:id="origNodeLabel" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label text="Terminating Node" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label fx:id="termNodeLabel" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Label text="Current Neighbors of Originating Node" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="2" />
+            <JFXToggleButton fx:id="mapToggleButtonTerm" layoutX="105.0" layoutY="365.0" mnemonicParsing="false" onAction="#mapEnabler" text="Terminating Node" textFill="WHITE" toggleColor="WHITE" toggleLineColor="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
+            <Label text="Originating Node" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+            <JFXButton fx:id="btnDownload" buttonType="RAISED" maxHeight="30.0" maxWidth="150.0" minHeight="30.0" minWidth="150.0" onAction="#downloadFile" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: white;" text="Download to .csv" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="editNodesButton" buttonType="RAISED" maxHeight="30.0" maxWidth="150.0" minHeight="30.0" minWidth="150.0" onAction="#goToEditNodes" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: white;" text="Edit Nodes" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnAddEdge" buttonType="RAISED" maxHeight="30.0" maxWidth="150.0" minHeight="30.0" minWidth="150.0" onAction="#createNewEdge" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: white;" text="Add Edge" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="266.0" minWidth="266.0" prefWidth="266.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="266.0" minWidth="266.0" prefWidth="266.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="266.0" minWidth="266.0" prefWidth="266.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

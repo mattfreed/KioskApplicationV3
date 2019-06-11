@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAnchorPane" prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.cs3733d19.teamg.EditMapController">
+    <children>
+      <StackPane layoutX="-1.5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+              <JFXTabPane fx:id="tabPane" side="LEFT" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="50.0" tabMinHeight="50.0">
+                  <tabs>
+                      <Tab fx:id="floor4Tab" onSelectionChanged="#floorHandler">
+                          <content>
+                              <AnchorPane fx:id="anchorPaneF4" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                  <children>
+                                      <ImageView fx:id="imageViewF4" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#getCoordinatesHandler" pickOnBounds="true" />
+                                  </children>
+                              </AnchorPane>
+                          </content>
+                      </Tab>
+                      <Tab fx:id="floor3Tab" onSelectionChanged="#floorHandler" style="-fx-background-color: #012953;">
+                          <content>
+                              <AnchorPane fx:id="anchorPaneF3" minHeight="0.0" minWidth="0.0">
+                                  <children>
+                                      <ImageView fx:id="imageViewF3" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#getCoordinatesHandler" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                  </children>
+                              </AnchorPane>
+                          </content>
+                      </Tab>
+                      <Tab fx:id="floor2Tab" onSelectionChanged="#floorHandler" style="-fx-background-color: #012953;">
+                          <content>
+                              <AnchorPane fx:id="anchorPaneF2" minHeight="0.0" minWidth="0.0">
+                                  <children>
+                                      <ImageView fx:id="imageViewF2" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#getCoordinatesHandler" pickOnBounds="true" preserveRatio="true" />
+                                  </children>
+                              </AnchorPane>
+                          </content>
+                      </Tab>
+                      <Tab fx:id="floor1Tab" onSelectionChanged="#floorHandler" style="-fx-background-color: #012953;">
+                          <content>
+                              <AnchorPane fx:id="anchorPaneF1" minHeight="0.0" minWidth="0.0">
+                                  <children>
+                                      <ImageView fx:id="imageViewF1" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#getCoordinatesHandler" pickOnBounds="true" preserveRatio="true" />
+                                  </children>
+                              </AnchorPane>
+                          </content>
+                      </Tab>
+                      <Tab fx:id="groundFloorTab" onSelectionChanged="#floorHandler" style="-fx-background-color: #012953;">
+                          <content>
+                              <AnchorPane fx:id="anchorPaneGf" minHeight="0.0" minWidth="0.0">
+                                  <children>
+                                      <ImageView fx:id="imageViewGf" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#getCoordinatesHandler" pickOnBounds="true" preserveRatio="true" />
+                                  </children>
+                              </AnchorPane>
+                          </content>
+                      </Tab>
+                      <Tab fx:id="lowerFloor1Tab" onSelectionChanged="#floorHandler" style="-fx-background-color: #012953;">
+                          <content>
+                              <AnchorPane fx:id="anchorPaneLf1" minHeight="0.0" minWidth="0.0" prefHeight="180.0">
+                                  <children>
+                                      <ImageView fx:id="imageViewLf1" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#getCoordinatesHandler" pickOnBounds="true" preserveRatio="true" />
+                                  </children>
+                              </AnchorPane>
+                          </content>
+                      </Tab>
+                      <Tab fx:id="lowerFloor2Tab" onSelectionChanged="#floorHandler" style="-fx-background-color: #012953;">
+                          <content>
+                              <AnchorPane fx:id="anchorPaneLf2" minHeight="0.0" minWidth="0.0">
+                                  <children>
+                                      <ImageView fx:id="imageViewLf2" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#getCoordinatesHandler" pickOnBounds="true" preserveRatio="true" />
+                                  </children>
+                              </AnchorPane>
+                          </content>
+                      </Tab>
+                  </tabs>
+              </JFXTabPane>
+            <JFXToggleButton fx:id="newNodeToggle" mnemonicParsing="false" onAction="#mapEnabler" text="Add New Node" toggleColor="#fafafa" toggleLineColor="#012953" StackPane.alignment="BOTTOM_RIGHT" />
+            <JFXButton fx:id="aboutButton11" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" onAction="#downloadMap" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #012953;" text="Download Map" textAlignment="CENTER" textFill="WHITE" StackPane.alignment="BOTTOM_RIGHT">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets bottom="60.0" right="20.0" />
+               </StackPane.margin>
+            </JFXButton>
+            <JFXButton fx:id="cancelActionButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" onAction="#cancelAction" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #012953;" text="Cancel Action" textAlignment="CENTER" textFill="WHITE" StackPane.alignment="BOTTOM_RIGHT">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets bottom="100.0" right="20.0" />
+               </StackPane.margin>
+            </JFXButton>
+            <AnchorPane maxHeight="100.0" maxWidth="200.0" minHeight="100.0" minWidth="200.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #012953;" StackPane.alignment="BOTTOM_LEFT">
+               <StackPane.margin>
+                  <Insets bottom="20.0" left="70.0" />
+               </StackPane.margin>
+               <children>
+                  <Label fx:id="instructionsLabel" alignment="CENTER" layoutX="77.0" layoutY="17.0" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" textFill="WHITE" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+               </children>
+               <effect>
+                  <DropShadow color="#00000047" offsetX="5.0" offsetY="5.0" />
+               </effect></AnchorPane>
+         </children>
+      </StackPane>
+    </children>
+</AnchorPane>

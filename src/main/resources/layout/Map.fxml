@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="mainAnchorPane" prefHeight="212.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.cs3733d19.teamg.MapController">
+   <children>
+      <JFXTabPane fx:id="tabPane" side="LEFT" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="50.0" tabMinHeight="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab fx:id="floor4Tab" onSelectionChanged="#floorHandler">
+              <content>
+                <AnchorPane fx:id="anchorPaneF4" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="imageViewF4" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#recieveMapSelection" pickOnBounds="true" />
+                     </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="floor3Tab" onSelectionChanged="#floorHandler" style="-fx-background-color: #012953;">
+               <content>
+                  <AnchorPane fx:id="anchorPaneF3" minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <ImageView fx:id="imageViewF3" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#recieveMapSelection" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="floor2Tab" onSelectionChanged="#floorHandler" style="-fx-background-color: #012953;">
+               <content>
+                  <AnchorPane fx:id="anchorPaneF2" minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <ImageView fx:id="imageViewF2" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#recieveMapSelection" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="floor1Tab" onSelectionChanged="#floorHandler" style="-fx-background-color: #012953;">
+               <content>
+                  <AnchorPane fx:id="anchorPaneF1" minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <ImageView fx:id="imageViewF1" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#recieveMapSelection" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="groundFloorTab" onSelectionChanged="#floorHandler" style="-fx-background-color: #012953;">
+               <content>
+                  <AnchorPane fx:id="anchorPaneGf" minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <ImageView fx:id="imageViewGf" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#recieveMapSelection" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="lowerFloor1Tab" onSelectionChanged="#floorHandler" style="-fx-background-color: #012953;">
+               <content>
+                  <AnchorPane fx:id="anchorPaneLf1" minHeight="0.0" minWidth="0.0" prefHeight="180.0">
+                     <children>
+                        <ImageView fx:id="imageViewLf1" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#recieveMapSelection" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="lowerFloor2Tab" onSelectionChanged="#floorHandler" style="-fx-background-color: #012953;">
+               <content>
+                  <AnchorPane fx:id="anchorPaneLf2" minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <ImageView fx:id="imageViewLf2" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#recieveMapSelection" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

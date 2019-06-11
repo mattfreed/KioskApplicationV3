@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="215.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.cs3733d19.teamg.RoomBookingPopUpController">
+   <children>
+      <VBox alignment="CENTER" layoutX="107.0" layoutY="-14.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="roomNumberSchedule" alignment="CENTER" contentDisplay="CENTER" />
+            <JFXDatePicker fx:id="dateUpdate" onAction="#updateSchedule" VBox.vgrow="ALWAYS" />
+            <GridPane alignment="CENTER" gridLinesVisible="true" prefHeight="549.0" prefWidth="215.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" prefWidth="48.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="167.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label contentDisplay="CENTER" text="00:00" GridPane.halignment="CENTER" />
+                  <Label text="01:00" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <Label text="02:00" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <Label text="03:00" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                  <Label text="04:00" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                  <Label text="05:00" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                  <Label text="06:00" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                  <Label text="07:00" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                  <Label text="08:00" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                  <Label text="09:00" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+                  <Label text="10:00" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
+                  <Label text="11:00" GridPane.halignment="CENTER" GridPane.rowIndex="11" />
+                  <Label text="12:00" GridPane.halignment="CENTER" GridPane.rowIndex="12" />
+                  <Label text="13:00" GridPane.halignment="CENTER" GridPane.rowIndex="13" />
+                  <Label text="14:00" GridPane.halignment="CENTER" GridPane.rowIndex="14" />
+                  <Label text="15:00" GridPane.halignment="CENTER" GridPane.rowIndex="15" />
+                  <Label text="16:00" GridPane.halignment="CENTER" GridPane.rowIndex="16" />
+                  <Label text="17:00" GridPane.halignment="CENTER" GridPane.rowIndex="17" />
+                  <Label text="18:00" GridPane.halignment="CENTER" GridPane.rowIndex="18" />
+                  <Label text="19:00" GridPane.halignment="CENTER" GridPane.rowIndex="19" />
+                  <Label text="20:00" GridPane.halignment="CENTER" GridPane.rowIndex="20" />
+                  <Label text="21:00" GridPane.halignment="CENTER" GridPane.rowIndex="21" />
+                  <Label text="22:00" GridPane.halignment="CENTER" GridPane.rowIndex="22" />
+                  <Label text="23:00" GridPane.halignment="CENTER" GridPane.rowIndex="23" />
+                  <Label fx:id="hourZero" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Label fx:id="hourOne" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                  <Label fx:id="hourTwo" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                  <Label fx:id="hourThree" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                  <Label fx:id="hourFour" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                  <Label fx:id="hourFive" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                  <Label fx:id="hourSix" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                  <Label fx:id="hourSeven" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                  <Label fx:id="hourEight" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                  <Label fx:id="hourNine" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+                  <Label fx:id="hourTen" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
+                  <Label fx:id="hourEleven" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="11" />
+                  <Label fx:id="hourTwelve" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="12" />
+                  <Label fx:id="hourThirteen" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="13" />
+                  <Label fx:id="hourFourteen" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="14" />
+                  <Label fx:id="hourFifteen" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="15" />
+                  <Label fx:id="hourSixteen" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="16" />
+                  <Label fx:id="hourSeventeen" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="17" />
+                  <Label fx:id="hourEighteen" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="18" />
+                  <Label fx:id="hourNineteen" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="19" />
+                  <Label fx:id="hourTwenty" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="20" />
+                  <Label fx:id="hourTwentyOne" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="21" />
+                  <Label fx:id="hourTwentyTwo" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="22" />
+                  <Label fx:id="hourTwentyThree" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #32CD32;" text="Free" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="23" />
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
